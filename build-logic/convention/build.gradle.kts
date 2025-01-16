@@ -1,4 +1,5 @@
 plugins {
+    `kotlin-dsl`
     id("java-library")
     alias(libs.plugins.kotlin.jvm)
 }

@@ -47,6 +47,7 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 
+
 [libraries]
 # Gradle Plugin
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -190,6 +191,7 @@ test = [
     "androidx-ui-test-manifest",
     "androidx-ui-test-junit4",
 ]
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
