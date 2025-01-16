@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Compose-Template"
 include(":app")
- 
+include(":build-logic:convention")
