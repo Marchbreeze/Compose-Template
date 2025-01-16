@@ -164,10 +164,6 @@ kotlinx = [
     "kotlinx-datetime",
 ]
 
-java = [
-    "javax-inject",
-]
-
 ui-libraries = [
     "coil-compose",
     "coil-network-okhttp",
@@ -189,7 +185,7 @@ androidx-ui-test = [
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-android-test = { id = "com.android.test", version.ref = "agp" }
+java-library = { id = "java-library", version.ref = "agp" }
 
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
