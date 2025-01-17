@@ -26,3 +26,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Compose-Template"
 include(":app")
+include(":domain")
+include(":data")

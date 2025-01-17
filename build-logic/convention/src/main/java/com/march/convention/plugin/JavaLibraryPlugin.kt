@@ -9,7 +9,6 @@ import com.march.convention.extension.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPluginExtension
-import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 
@@ -27,7 +26,7 @@ class JavaLibraryPlugin : Plugin<Project> {
             }
 
             dependencies {
-                implementation(libs.getBundle("kotlin"))
+                implementation(libs.getBundle("kotlinx"))
                 implementation(libs.getLibrary("kotlinx-coroutines-core"))
                 implementation(libs.getLibrary("javax-inject"))
             }
