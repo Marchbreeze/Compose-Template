@@ -1,6 +1,7 @@
 package com.march.convention
 
 import org.gradle.api.JavaVersion
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 object Constants {
     const val packageName = "com.march.breeze"
@@ -12,6 +13,6 @@ object Constants {
     const val versionCode = 1
     const val versionName = "1.0.0"
 
-    const val jvmVersion = "11"
+    val JVM_VERSION = JvmTarget.JVM_11
     val JAVA_VERSION = JavaVersion.VERSION_11
 }

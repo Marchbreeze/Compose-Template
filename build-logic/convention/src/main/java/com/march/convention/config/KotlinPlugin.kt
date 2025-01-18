@@ -5,13 +5,13 @@ import com.march.convention.Constants
 import com.march.convention.extension.getBundle
 import com.march.convention.extension.getPlugin
 import com.march.convention.extension.implementation
-import com.march.convention.extension.kotlinOptions
 import com.march.convention.extension.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.gradle.kotlin.dsl.withType
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 class KotlinPlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
@@ -26,14 +26,16 @@ class KotlinPlugin : Plugin<Project> {
                 sourceCompatibility = Constants.JAVA_VERSION
                 targetCompatibility = Constants.JAVA_VERSION
             }
+        }
 
-            kotlinOptions {
-                jvmTarget.set(JvmTarget.fromTarget(Constants.jvmVersion))
+        tasks.withType<KotlinCompile>().configureEach {
+            compilerOptions {
+                jvmTarget.set(Constants.JVM_VERSION)
             }
         }
 
         dependencies {
-            implementation(libs.getBundle("kotlin"))
+            implementation(libs.getBundle("kotlinx"))
             implementation(libs.getBundle("coroutines"))
         }
     }
