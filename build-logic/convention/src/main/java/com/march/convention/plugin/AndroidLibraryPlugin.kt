@@ -30,6 +30,12 @@ class AndroidLibraryPlugin : Plugin<Project> {
                 defaultConfig {
                     minSdk = Constants.minSdk
                     consumerProguardFiles("consumer-rules.pro")
+                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+                }
+
+                compileOptions {
+                    sourceCompatibility = Constants.JAVA_VERSION
+                    targetCompatibility = Constants.JAVA_VERSION
                 }
             }
         }

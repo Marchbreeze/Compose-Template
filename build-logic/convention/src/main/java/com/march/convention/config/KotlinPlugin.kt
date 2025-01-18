@@ -21,13 +21,6 @@ class KotlinPlugin : Plugin<Project> {
             apply(libs.getPlugin("kotlin-serialization"))
         }
 
-        extensions.configure<LibraryExtension> {
-            compileOptions {
-                sourceCompatibility = Constants.JAVA_VERSION
-                targetCompatibility = Constants.JAVA_VERSION
-            }
-        }
-
         tasks.withType<KotlinCompile>().configureEach {
             compilerOptions {
                 jvmTarget.set(Constants.JVM_VERSION)

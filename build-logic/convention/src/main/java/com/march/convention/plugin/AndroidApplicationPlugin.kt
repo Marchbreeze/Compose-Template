@@ -33,6 +33,12 @@ class AndroidApplicationPlugin : Plugin<Project> {
                 minSdk = Constants.minSdk
                 versionCode = Constants.versionCode
                 versionName = Constants.versionName
+                testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+            }
+
+            compileOptions {
+                sourceCompatibility = Constants.JAVA_VERSION
+                targetCompatibility = Constants.JAVA_VERSION
             }
 
             buildTypes {
