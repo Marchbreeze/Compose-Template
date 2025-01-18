@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.march.feature.onboarding"
+    namespace = "com.march.feature.profile"
 }
 
 dependencies {

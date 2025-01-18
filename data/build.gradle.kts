@@ -1,3 +1,5 @@
+import com.march.convention.extension.implementation
+
 plugins {
     id("com.march.breeze.androidLibrary")
 }
@@ -8,6 +10,7 @@ android {
 
 dependencies {
     implementation(projects.domain)
+    implementation(projects.core.network)
 
     implementation(platform(libs.okhttp.bom))
     implementation(libs.bundles.okhttp)
