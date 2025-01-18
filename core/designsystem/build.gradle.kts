@@ -5,3 +5,6 @@ plugins {
 android {
     namespace = "com.march.core.designsystem"
 }
+dependencies {
+    implementation(projects.core.common)
+}

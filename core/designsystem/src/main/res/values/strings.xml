@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">Stempo</string>
+
+    <string name="to_string">%s</string>
+    <string name="dummy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <string name="token_expire_error_msg">로그인 상태를 확인해주세요!</string>
+    <string name="error_msg">오류가 발생했습니다. 잠시 후 다시 시도해주세요.</string>
+    <string name="adapter_not_initialized_error_msg">Adapter is not initialized</string>
+    <string name="manager_not_initialized_error_msg">Billing Manager is not initialized</string>
+    <string name="view_type_error_msg">Unknown View Type : %d</string>
+
+    <string name="agree">모두 동의합니다</string>
+
+    <string name="getting_start">시작하기</string>
+    <string name="ing">측정 중...</string>
+    <string name="before_page">이전페이지</string>
+    <string name="next_page">다음페이지</string>
+    <string name="ok">확인</string>
+
+    <string name="menu_rhythm">리듬</string>
+    <string name="menu_report">기록</string>
+    <string name="menu_study">과제</string>
+    <string name="menu_profile">마이</string>
+
+    <string name="rhythm_tv_bit">%d박자</string>
+    <string name="rhythm_tv_bpm">%d빠르기</string>
+    <string name="rhythm_tv_step">%03d걸음</string>
+    <string name="rhythm_tv_title">리듬에 맞춰 걸어주세요!</string>
+    <string name="rhythm_btn_change_level">단계 변경하기</string>
+    <string name="rhythm_btn_submit_level">완료하기</string>
+    <string name="rhythm_toast_save_success">기록 저장이 완료되었어요!</string>
+    <string name="rhythm_stretch_info">스트레칭 모드에서는\n자동 리듬을 제공해요</string>
+
+    <string name="rhythm_wearable_sync">"워치와 리듬 동기화를 위해\n스템포 워치 앱 화면을 켜고\n확인 버튼을 눌러주세요"</string>
+
+    <string name="rhythm_stop_tv_title">종료하기를 누르면\n지금까지의 걸음이 기록돼요.\n잠시 멈추시는거라면\n정지하기를 눌러주세요.</string>
+    <string name="rhythm_stop_btn_save">종료하기</string>
+    <string name="rhythm_stop_btn_pause">정지하기</string>
+
+    <string name="stretch_tv_title">리듬에 맞춰\n스트레칭을 진행해주세요!</string>
+
+    <string name="report_tv_accuracy_average">정확도 평균 %d%%</string>
+    <string name="report_tv_title">동안의 성과에요!</string>
+    <string name="report_tv_achieve_title">달성한 업적</string>
+    <string name="report_btn_achieve_full">전체보기</string>
+
+    <string name="report_tv_month_1">1개월</string>
+    <string name="report_tv_month_3">3개월</string>
+    <string name="report_tv_month_6">6개월</string>
+    <string name="report_tv_month">%d개월</string>
+
+    <string name="report_tv_achieve_today">오늘</string>
+    <string name="report_tv_achieve_week">이번주</string>
+    <string name="report_tv_achieve_consecutive">연속</string>
+    <string name="report_tv_achieve_count">%d회</string>
+
+    <string name="onboarding_start_tv_title">리듬 추천을 위해\n보행속도 정보가 필요해요\n진행하시겠어요?</string>
+    <string name="onboarding_start_measure_button">보행속도 측정하기</string>
+
+    <string name="onboarding_measure_tv_title">보행속도를 측정합니다</string>
+    <string name="onboarding_measure_tv_subtitle">평소와 같은 걸음으로\n약 1분간 걸어주세요</string>
+
+    <string name="onboarding_end_tv_title">측정이 완료되었습니다</string>
+    <string name="onboarding_end_tv_subtitle">스템포를 시작해볼까요?</string>
+
+    <string name="profile_tv_title">마이스템포</string>
+    <string name="profile_btn_announce">공지사항</string>
+    <string name="profile_btn_faq">FAQ</string>
+    <string name="profile_btn_voice">불편한 점 얘기하기 (음성)</string>
+    <string name="profile_btn_suggest">건의하기</string>
+    <string name="profile_version">버전 정보</string>
+    <string name="profile_btn_withdraw">기록 지우기</string>
+    <string name="profile_not_prepared">다음 업데이트 때 사용 가능해요!</string>
+
+    <string name="profile_withdraw_content">모든 기록이 사라져요!\n정말로 기록을 삭제할까요?</string>
+    <string name="profile_withdraw_cancel">취소하기</string>
+    <string name="profile_withdraw_delete">삭제하기</string>
+
+    <string name="study_tv_title">과제</string>
+    <string name="study_tv_empty">스템포와 운동해볼까요?</string>
+    <string name="study_tv_progress">과제 진척도</string>
+    <string name="study_tv_my">진행해야 할 과제에요!</string>
+    <string name="study_tv_teacher">입력한 과제에요!</string>
+    <string name="study_btn_add">+ 과제 추가하기</string>
+
+    <string name="study_add_title">숙제를 추가해주세요</string>
+    <string name="study_add_hint">숙제를 입력해주세요</string>
+    <string name="study_add_exit">취소하기</string>
+    <string name="study_add_save">추가하기</string>
+
+    <string name="study_toast_add">과제가 추가되었어요</string>
+    <string name="study_toast_delete">과제가 삭제되었어요</string>
+
+    <string name="statistics_counter">%d회</string>
+
+</resources>

@@ -18,6 +18,5 @@ dependencies {
     implementation(projects.feature.profile)
 
     implementation(libs.bundles.navigation)
-    implementation(libs.bundles.ui.libraries)
     implementation(libs.phoenix)
 }

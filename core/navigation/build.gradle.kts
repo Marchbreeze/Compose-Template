@@ -8,5 +8,4 @@ android {
 
 dependencies {
     implementation(libs.bundles.navigation)
-    implementation(libs.bundles.ui.libraries)
 }

@@ -1,5 +1,5 @@
 plugins {
-    id("com.march.breeze.androidLibrary")
+    id("com.march.breeze.androidCompose")
 }
 
 android {

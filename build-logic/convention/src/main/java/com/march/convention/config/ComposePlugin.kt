@@ -3,6 +3,7 @@ package com.march.convention.config
 import com.android.build.gradle.LibraryExtension
 import com.march.convention.extension.debugImplementation
 import com.march.convention.extension.getBundle
+import com.march.convention.extension.getLibrary
 import com.march.convention.extension.getPlugin
 import com.march.convention.extension.implementation
 import com.march.convention.extension.libs
@@ -24,7 +25,9 @@ class ComposePlugin : Plugin<Project> {
         }
 
         dependencies {
+            implementation(platform(libs.getLibrary("androidx-compose-bom")))
             implementation(libs.getBundle("compose"))
+            implementation(libs.getBundle("ui-libraries"))
             debugImplementation(libs.getBundle("androidx-ui-test"))
         }
     }
