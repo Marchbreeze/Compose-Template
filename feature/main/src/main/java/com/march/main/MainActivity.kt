@@ -1,4 +1,4 @@
-package com.march.breeze
+package com.march.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

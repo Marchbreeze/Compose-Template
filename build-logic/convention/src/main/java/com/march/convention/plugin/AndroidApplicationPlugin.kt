@@ -53,6 +53,10 @@ class AndroidApplicationPlugin : Plugin<Project> {
                     )
                 }
             }
+
+            buildFeatures {
+                buildConfig = true
+            }
         }
 
         dependencies {

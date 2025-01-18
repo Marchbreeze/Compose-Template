@@ -3,6 +3,8 @@ plugins {
 }
 
 android {
+    namespace = "com.march.core.network"
+
     buildTypes {
         debug {
             val devUrl = properties["test.base.url"].toString()

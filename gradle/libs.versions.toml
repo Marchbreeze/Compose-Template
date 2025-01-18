@@ -35,7 +35,7 @@ kotlinxCoroutines = "1.9.0"
 javax = "1"
 
 # UI Libraries
-coil = "3.0.3"
+coil = "3.0.4"
 lottie = "6.0.0"
 
 # Third Libraries
@@ -104,7 +104,7 @@ kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 javax-inject = { group = "javax.inject", name = "javax.inject", version.ref = "javax" }
 
 # UI Libraries
-coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
 coil-network-okhttp = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
 lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie" }
 
