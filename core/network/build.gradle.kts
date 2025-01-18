@@ -1,43 +1,29 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    id("com.march.breeze.androidLibrary")
 }
 
 android {
-    namespace = "com.march.network"
-    compileSdk = 35
-
-    defaultConfig {
-        minSdk = 28
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
     buildTypes {
+        debug {
+            val devUrl = properties["test.base.url"].toString()
+            buildConfigField("String", "BASE_URL", devUrl)
+        }
+
         release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            val prodUrl = properties["base.url"].toString()
+            buildConfigField("String", "BASE_URL", prodUrl)
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
+
+    buildFeatures {
+        buildConfig = true
     }
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(platform(libs.okhttp.bom))
+    implementation(libs.bundles.okhttp)
+    implementation(platform(libs.retrofit.bom))
+    implementation(libs.bundles.retrofit)
+    implementation(libs.phoenix)
 }
