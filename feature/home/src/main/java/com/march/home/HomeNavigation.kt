@@ -12,7 +12,7 @@ fun NavController.navigateToHome(
     navigate(MainTabRoute.Home, navOptions)
 }
 
-fun NavGraphBuilder.profileNavGraph(
+fun NavGraphBuilder.homeNavGraph(
 ) {
     composable<MainTabRoute.Home> {
         HomeRoute()
