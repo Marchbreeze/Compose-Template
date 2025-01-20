@@ -1,5 +1,6 @@
 package com.march.home
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
@@ -13,8 +14,9 @@ fun NavController.navigateToHome(
 }
 
 fun NavGraphBuilder.homeNavGraph(
+    paddingValues: PaddingValues
 ) {
     composable<MainTabRoute.Home> {
-        HomeRoute()
+        HomeRoute(paddingValues)
     }
 }

@@ -1,7 +1,6 @@
 package com.march.main
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -33,15 +32,13 @@ fun MainScreen(
         },
         content = { paddingValue ->
             NavHost(
-                modifier = Modifier
-                    .padding(paddingValue)
-                    .background(White),
+                modifier = Modifier.background(White),
                 startDestination = navigator.startDestination,
                 navController = navigator.navController,
             ) {
-                onboardingNavGraph()
-                homeNavGraph()
-                profileNavGraph()
+                onboardingNavGraph(paddingValue)
+                homeNavGraph(paddingValue)
+                profileNavGraph(paddingValue)
             }
         }
     )

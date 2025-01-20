@@ -1,5 +1,6 @@
 package com.march.onboarding.navigation
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
@@ -21,11 +22,12 @@ fun NavController.navigateToMeasure(
 }
 
 fun NavGraphBuilder.onboardingNavGraph(
+    paddingValues: PaddingValues
 ) {
     composable<OnboardingRoute.Splash> {
-        SplashRoute()
+        SplashRoute(paddingValues)
     }
     composable<OnboardingRoute.Measure> {
-        MeasureRoute()
+        MeasureRoute(paddingValues)
     }
 }
