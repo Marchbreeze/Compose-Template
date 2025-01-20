@@ -5,5 +5,4 @@ plugins {
 dependencies {
     implementation(projects.data)
     implementation(projects.feature.main)
-    implementation(projects.feature.onboarding)
 }

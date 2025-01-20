@@ -9,10 +9,8 @@ android {
 }
 
 dependencies {
-    implementation(projects.domain)
     implementation(projects.core.designsystem)
     implementation(projects.core.navigation)
-    implementation(projects.core.common)
     implementation(projects.feature.onboarding)
     implementation(projects.feature.home)
     implementation(projects.feature.profile)
