@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.march.breeze.androidLibrary")
 }
@@ -5,9 +7,13 @@ plugins {
 android {
     namespace = "com.march.core.network"
 
+    val properties = Properties().apply {
+        load(rootProject.file("local.properties").inputStream())
+    }
+
     buildTypes {
         debug {
-            val devUrl = properties["test.base.url"].toString()
+            val devUrl = properties["base.url"].toString()
             buildConfigField("String", "BASE_URL", devUrl)
         }
 
