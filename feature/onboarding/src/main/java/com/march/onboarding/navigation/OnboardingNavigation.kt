@@ -22,10 +22,15 @@ fun NavController.navigateToMeasure(
 }
 
 fun NavGraphBuilder.onboardingNavGraph(
-    paddingValues: PaddingValues
+    paddingValues: PaddingValues,
+    navigateToHome: () -> Unit,
+    navigateToMeasure: () -> Unit,
 ) {
     composable<OnboardingRoute.Splash> {
-        SplashRoute(paddingValues)
+        SplashRoute(
+            navigateToMain = navigateToHome,
+            navigateToMeasure = navigateToMeasure
+        )
     }
     composable<OnboardingRoute.Measure> {
         MeasureRoute(paddingValues)

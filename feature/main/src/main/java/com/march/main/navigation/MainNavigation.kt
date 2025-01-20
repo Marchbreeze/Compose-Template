@@ -10,6 +10,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
 import com.march.home.navigateToHome
 import com.march.navigation.OnboardingRoute
+import com.march.onboarding.navigation.navigateToMeasure
 import com.march.profile.navigateToProfile
 
 class MainNavigator(
@@ -46,6 +47,10 @@ class MainNavigator(
             MainTab.PROFILE -> navController.navigateToProfile(navOptions)
         }
     }
+
+    fun navigateToMeasure() = navController.navigateToMeasure()
+
+    fun navigateToHome() = navController.navigateToHome()
 }
 
 @Composable

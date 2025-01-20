@@ -4,19 +4,16 @@ import androidx.compose.foundation.background
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.compose.NavHost
 import com.march.designsystem.theme.White
-import com.march.home.homeNavGraph
 import com.march.main.component.MainBottomBar
+import com.march.main.component.MainNavHost
 import com.march.main.navigation.MainNavigator
 import com.march.main.navigation.MainTab
 import com.march.main.navigation.rememberMainNavigator
-import com.march.onboarding.navigation.onboardingNavGraph
-import com.march.profile.profileNavGraph
 import kotlinx.collections.immutable.toImmutableList
 
 @Composable
-fun MainScreen(
+internal fun MainScreen(
     navigator: MainNavigator = rememberMainNavigator(),
 ) {
     Scaffold(
@@ -25,21 +22,15 @@ fun MainScreen(
                 visible = navigator.shouldShowBottomBar(),
                 tabs = MainTab.entries.toImmutableList(),
                 currentTab = navigator.currentTab,
-                onTabSelected = { tab ->
-                    navigator.navigate(tab)
-                }
+                onTabSelected = navigator::navigate
             )
         },
-        content = { paddingValue ->
-            NavHost(
-                modifier = Modifier.background(White),
-                startDestination = navigator.startDestination,
-                navController = navigator.navController,
-            ) {
-                onboardingNavGraph(paddingValue)
-                homeNavGraph(paddingValue)
-                profileNavGraph(paddingValue)
-            }
+        content = { paddingValues ->
+            MainNavHost(
+                paddingValues = paddingValues,
+                navigator = navigator,
+                modifier = Modifier.background(White)
+            )
         }
     )
 }
